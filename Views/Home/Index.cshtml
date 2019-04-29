@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Blog.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+@foreach (var item in Model)
+{
+    <div class="card mb-4">
+        <img class="card-img-top" width="700" height="350" src="~/images/@Html.DisplayFor(modelItem => item.Photo)" alt="Card image cap">
+        <div class="card-body">
+
+            <h2 class="card-title">
+                @Html.DisplayFor(modelItem => item.Title)
+            </h2>
+
+            <p class="card-text">
+                @Html.DisplayFor(modelItem => item.Context)
+            </p>
+
+            <a href="@Url.Action("Details/" + item.Id, "Post")" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+            Opublikowano @Html.DisplayFor(modelItem => item.Date)
+
+        </div>
+    </div>
+
+}
