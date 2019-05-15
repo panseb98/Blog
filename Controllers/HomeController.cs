@@ -21,7 +21,10 @@ namespace Blog.Controllers
         {
             return View(_db.Post.ToList());
         }
-
+        public IActionResult About()
+        {
+            return View();
+        }
        
     }
 }

@@ -17,13 +17,6 @@ namespace Blog.Controllers
             _db = db;
         }
 
-        public async Task<IActionResult> Create(Comment model, int id)
-        {
-            var post = _db.Post.Find(id);
-            model.PubDate = DateTime.UtcNow;
-            post.Comments.Add(model);
-            await _db.SaveChangesAsync();
-            return View();
-        }
+        
     }
 }

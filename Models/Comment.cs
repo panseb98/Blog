@@ -24,5 +24,7 @@ namespace Blog.Models
         public DateTime PubDate { get; set; } = DateTime.UtcNow;
 
         public bool IsAdmin { get; set; }
+
+        public int PostId { get; set; }
     }
 }

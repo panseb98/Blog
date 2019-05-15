@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Blog.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Blog.Models;
 
 namespace Blog
 {

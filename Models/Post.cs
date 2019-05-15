@@ -21,7 +21,9 @@ namespace Blog.Models
 
         public string Photo { get; set; }
 
-        public IList<Comment> Comments { get; } = new List<Comment>();
+        public List<Comment> Comments { get; } = new List<Comment>();
+
+        public string Substr { get; set; }
 
     }
 }

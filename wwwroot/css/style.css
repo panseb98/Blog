@@ -1,0 +1,30 @@
+.navbar {
+	background-color: black;
+    height: 60px;
+}
+
+.navbar-brand img {
+	height: 40px;
+}
+
+.navbar .fa-bars {
+	font-size: 35px;
+	color: #fff;
+}
+
+.navbar-toggler {
+	outline: none;
+}
+
+.navbar-nav {
+	float: right;
+	text-align: right;
+}
+
+.nav-link {
+	color: #fff;
+}
+
+.container {
+	padding-top: 30px;
+}

@@ -36,7 +36,7 @@ namespace Blog.Data.Migrations
 
                     b.Property<bool>("IsAdmin");
 
-                    b.Property<int?>("PostId");
+                    b.Property<int>("PostId");
 
                     b.Property<DateTime>("PubDate");
 
@@ -59,6 +59,8 @@ namespace Blog.Data.Migrations
                     b.Property<DateTime>("Date");
 
                     b.Property<string>("Photo");
+
+                    b.Property<string>("Substr");
 
                     b.Property<string>("Title")
                         .IsRequired();
@@ -237,7 +239,8 @@ namespace Blog.Data.Migrations
                 {
                     b.HasOne("Blog.Models.Post")
                         .WithMany("Comments")
-                        .HasForeignKey("PostId");
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

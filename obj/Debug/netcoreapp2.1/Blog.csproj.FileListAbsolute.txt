@@ -36,7 +36,12 @@ F:\Blog\Blog\obj\Debug\netcoreapp2.1\Blog.csproj.CopyComplete
 F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Post\Create.g.cshtml.cs
 F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Post\Index.g.cshtml.cs
 F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_NewLayout.g.cshtml.cs
-F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Post\Edit.g.cshtml.cs
 F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Button.g.cshtml.cs
 F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Comment\Create.g.cshtml.cs
 F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Post\Details.g.cshtml.cs
+F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
+F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Login.g.cshtml.cs
+F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Post\Edit.g.cshtml.cs
+F:\Blog\Blog\obj\Debug\netcoreapp2.1\Razor\Views\Post\Delete.g.cshtml.cs

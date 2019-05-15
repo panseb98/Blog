@@ -1,45 +1,65 @@
 ﻿@model Blog.Models.Post
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 
 @{
     ViewData["Title"] = "Create";
 }
+@if (SignInManager.IsSignedIn(User))
 
-<h2>Create</h2>
 
-<h4>Post</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-           
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Context" class="control-label"></label>
-                <input asp-for="Context" class="form-control" />
-                <span asp-validation-for="Context" class="text-danger"></span>
+{
+    <h2>Create</h2>
 
-            </div>
-            
-            <div class="form-group">
+    <h4>Post</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Context" class="control-label"></label>
+                    <textarea asp-for="Context" class="form-control"> </textarea>
+                    <span asp-validation-for="Context" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Substr" class="control-label"></label>
+                    <textarea asp-for="Substr" class="form-control"> </textarea>
+                    <span asp-validation-for="Substr" class="text-danger"></span>
+
+                </div>
+
+                <div class="form-group">
                     <label asp-for="Photo" class="custom-control"></label>
 
-                    <input type="file" name="file" multiple class="form-control" />
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
+                    <input type="file" id="file" name="file" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+}
+else
+{
+        <img class="card-img-top" width="700" height="350" src="~/images/niedlapsa.jpg" alt="Card image cap">
+}
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
